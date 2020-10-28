@@ -133,13 +133,11 @@ a:hover {
 .skills {
     background-color: #ffffff;
     border: 1px #dddfe5 solid;
-    border-radius: 10px;
+    border-radius: 26px;
     width: 132px;
-   /* height: 229px; */
     margin: 10px;
-  /*  padding: 30px; */
     color: #2e2e31;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .img-skills { 
@@ -195,6 +193,14 @@ h3 {
     color: #3c286c;
     margin: 80px 0 10px 0;
 }
+
+
+
+
+
+
+
+
 
 /*--------------------------------
         SECCIÓN QUOTE
