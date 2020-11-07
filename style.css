@@ -21,25 +21,29 @@ header {
     width: 100vw;
     justify-content: flex-end;
     box-shadow: 0 0 29px 0 rgba(134, 134, 134, 0.25);
-}
+} 
+
+
+
 
 /*--------------------------------
         NAV BAR GENERAL
 ----------------------------------*/
-
 
 ul {
     list-style-type: none;
     align-items: flex-end;
 }
 
+li:hover {
+    font-weight: bold;
+}
+
 a {
     text-decoration: none;
 }
 
-a:hover {
-    font-weight: bold;
-}
+
 
 
 /*--------------------------------
@@ -52,7 +56,7 @@ a:hover {
     color: #281c6f;
 }
 
-.menu-header, .menu-proyectos, .menu-footer {
+.menu-header, .menu-footer {
     margin: 10px;
     padding: 10px;
 }
@@ -66,7 +70,13 @@ a:hover {
 
 #nav-burger {
     display: none;
+    cursor: pointer;
 }
+#nav-burger:hover {
+    color: #4abfd0;
+}
+
+
 
 /*--------------------------------
         DISPLAY FLEX
@@ -194,6 +204,14 @@ h3 {
     margin: 80px 0 10px 0;
 }
 
+h4 {
+    color: #3c286c;
+    font-size: 20px;
+    color: #3c286c;
+    margin: 80px 0 10px 0; 
+    text-align: center;
+}
+
 
 /*--------------------------------
         SECCIÓN QUOTE
@@ -247,70 +265,72 @@ h3 {
     padding: 45px;
 }
 
-/* -- MENÚ -- */
-
-.div-proyectos {
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    margin: 10px auto 10px auto;
-}
-
-.menu-proyectos {
-    font-size: 16px;
-}
-
-.ul-proyectos {
-    justify-content: center;
-    align-items: center;
-}
-
-/* -- CAJA DE TARJETAS -- */
-
 .contenedor-proyectos {
-    display: flex;
-    width: 100%;
     margin-top: 40px;
     padding: 30px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 
-/* -- CAJA DE CADA TARJETA -- */
+/* -- CAJA DE TARJETAS -- */
 
-.proyectos {
-    background-color: #fafafa;
-    border: 1px #dddfe5 solid;
-    border-radius: 10px;
-    width: 330px;
-    height: 287px;
-    margin: 10px;
-    padding: 30px;
+
+.main-proyectos {
+    width: 95%;
+} 
+
+.post-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 250px);
+	gap: 25px;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.post {
+
+    border-radius: 25px;
     color: #2e2e31;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.img-proyectos {
-    margin: 5px 35px 5px 35px;
-    object-position: center;
-    max-width: 196px;
+.thumbnail {
+	display: block;
+	width: 100%;
+	height:180px;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
-.h2-proyectos {
-    margin-top: 100px;
+.post-preview {
+	background-color: #fff;
+    padding:15px;
+    border-radius: 25px;
 }
 
-.p-titulo-proyectos {
-    font-weight: 700;
-    font-size: 16px;
+.post-title {
+	margin: 0;
 }
 
-.proyectos:hover, 
-.proyectos:focus, 
-.proyectos:active {
-    box-shadow: 2px 2px 2px rgba(11, 94, 76, 0.6);
+.post-intro {
+	color:#4b5156;
+    font-size: 14px;
+    margin-bottom: 22px;
 }
+
+.button-proyecto {
+    background: linear-gradient(180deg, rgb(83 75 232) 0%, #289334 94%, #37b045 99%);
+    border-radius: 25px;
+    color: #ffffff;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+.button-proyecto:hover {
+    font-weight: bold;
+}
+
 
 
 /*--------------------------------
@@ -369,9 +389,8 @@ h3 {
     /*--------------------------------
             NAV BAR HEADER
     ----------------------------------*/
-   
 
-    .nav-header {
+   .nav-header {
         margin-right: 5%;
     }
    
@@ -418,6 +437,11 @@ h3 {
         font-size: 25px;
     }
 
+    h4 {
+        font-size: 20px;
+    }
+
+
     /*--------------------------------
             SECCIÓN SKILLS
     ----------------------------------*/
@@ -436,13 +460,16 @@ h3 {
     ----------------------------------*/
 
     /* -- CAJA DE TARJETAS -- */
-
-    .contenedor-proyectos {
+   .contenedor-proyectos {
         padding-left: 0;
         padding-right: 0;
     }
 
+   .main-proyectos{
+		width: 95%;
+	} 
 }
+
 
 /*-------------------------
     @MEDIA CELULARES
@@ -453,7 +480,7 @@ h3 {
             NAV BAR HEADER
     ----------------------------------*/
 
-    #ul-header {
+  #ul-header {
         display: none;
     }
 
@@ -462,6 +489,7 @@ h3 {
         font-size: 30px;
         color: #281c6f;
     }
+
 
     /*--------------------------------
             SECCIÓN HOLA
@@ -508,12 +536,16 @@ h3 {
         font-size: 30px;
     }
 
+    h4 {
+        font-size: 20px;
+    }
+
     /*--------------------------------
             SECCIÓN SKILLS
     ----------------------------------*/
 
     /* -- CAJA DE TARJETAS -- */
-    .contenedor-skills {
+   .contenedor-skills {
         width: 100%;
         padding: 5px;
     }
@@ -522,8 +554,14 @@ h3 {
         padding: 10px 10px;
         margin: 10px;
         font-size: 16px;
-    }
+    }  
     
+    
+    .post-wrapper{
+        width: 100%;
+        padding: 5px;
+    }
+
     /*--------------------------------
             SECCIÓN QUOTE
     ----------------------------------*/
@@ -538,24 +576,13 @@ h3 {
     /*--------------------------------
             SECCIÓN PROYECTOS
     ----------------------------------*/
+    
+    
     .seccion-proyectos {
         padding-left: 10px;
         padding-right: 10px; 
     }
-    
-    .div-proyectos {
-        padding-top: 10px;
-        padding-bottom: 0;
-    }
-    
-    /* -- MENÚ -- */
-    .ul-proyectos {
-        flex-wrap: wrap;
-    }
 
-    .menu-proyectos {
-        font-size: 14px;
-    }
 
     /* -- CAJA DE TARJETAS -- */
     .contenedor-proyectos {
@@ -563,14 +590,9 @@ h3 {
         padding-right: 0;
         padding-top: 5px;
     }
+
+
     
-    /* -- CAJA DE CADA TARJETA -- */
-    .proyectos {
-        width: 230px;
-        height: 230px;
-        margin: 10px;
-        padding: 10px;
-    }
 
     /*--------------------------------
                 FOOTER
@@ -587,5 +609,6 @@ h3 {
     .amor {
         font-size: 14px;
     }
+
 
 }
