@@ -331,7 +331,11 @@ h4 {
     font-weight: bold;
 }
 
-
+.ver-mas {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 31px;
+}
 
 /*--------------------------------
             FOOTER
@@ -467,7 +471,13 @@ h4 {
 
    .main-proyectos{
 		width: 95%;
-	} 
+    } 
+    
+    .ver-mas {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
 }
 
 
@@ -591,8 +601,11 @@ h4 {
         padding-top: 5px;
     }
 
-
-    
+    .ver-mas {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }   
 
     /*--------------------------------
                 FOOTER
