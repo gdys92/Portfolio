@@ -5,7 +5,7 @@ html {
 
 body {
     width: 100vw;
-    color: #2e2e31;
+ /*   color: #2e2e31;  */
     font-family: 'Montserrat', 'sans serif';
 }
 
@@ -16,13 +16,61 @@ body {
 }
 
 header {
-    background-color: #ffffff;
     padding: 20px 0;
     width: 100vw;
     justify-content: flex-end;
     box-shadow: 0 0 29px 0 rgba(134, 134, 134, 0.25);
 } 
+/*--------------------------------
+          DARK MODE
+----------------------------------*/
 
+body {
+    --color-bg: #ffffff;
+    --color-texto1: #42565b;
+}
+
+body.dark-theme {
+    --color-bg: #0d1117;
+    ;
+    --color-texto1: #ffb847;
+    --color-texto2: #86ae6f;
+    --color-texto3: #bcbfc0;
+}
+
+body.dark-theme img {
+    filter: brightness(.8) contrast(1.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --color-bg: #0d1117;
+        --color-texto1: #ffb847;
+        --color-texto2: #86ae6f;
+        --color-texto3: #bcbfc0;
+    }
+
+    body.light-theme {
+        --color-bg: #ffffff;
+        --color-texto1: #42565b;
+    }
+
+    img {
+        filter: brightness(.8) contrast(1.2);
+    }
+    
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+a, h3 {
+    color: var(--color-texto2);
+}
+p {
+    color: var(--color-texto3);
+}
 
 
 
@@ -53,7 +101,7 @@ a {
 
 .nav-header {
     margin-right: 10%;
-    color: #281c6f;
+  /*  color: #281c6f; */
 }
 
 .menu-header, .menu-footer {
@@ -115,7 +163,7 @@ a {
 
 .p-hola {
     text-align: left;
-    color: #42565b;
+ /*   color: #42565b;  */
     margin: 16px 0 40px 0;
 }
 
@@ -124,7 +172,7 @@ a {
 ----------------------------------*/
 
 .seccion-skills {
-    background-color: #e0e8f05e;
+   background-color: #6a6a6a5e; 
     padding: 45px;
     justify-content: center;
     align-items: center;
@@ -202,7 +250,7 @@ h2 {
 
 h3 {
     font-size: 30px;
-    color: #3c286c;
+ /*   color: #3c286c; */
     margin: 80px 0 10px 0;
 }
 
