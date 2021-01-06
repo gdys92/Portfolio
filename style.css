@@ -5,8 +5,9 @@ html {
 
 body {
     width: 100vw;
- /*   color: #2e2e31;  */
     font-family: 'Montserrat', 'sans serif';
+    transition: background 0.2s linear;
+    background-color: var(--color-bg);
 }
 
 * {
@@ -21,23 +22,74 @@ header {
     justify-content: flex-end;
     box-shadow: 0 0 29px 0 rgba(134, 134, 134, 0.25);
 } 
+
+/*--------------------------------
+            CHECKBOX
+----------------------------------*/
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+    background: linear-gradient(180deg, rgb(83 75 232) 0%, #289334 94%, #37b045 99%);
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+    transform: scale(1.5);
+    margin-left: 20px;
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+
+.fa-moon {
+	color: #ffbc53;
+}
+
+.fa-sun {
+	color: #ffbc53;
+}
+
+
 /*--------------------------------
           DARK MODE
 ----------------------------------*/
 
 body {
     --color-bg: #ffffff;
-    --color-texto1: #42565b;
+    --color-bg1: #f3faff;
+    --color-texto1: #3c286c;
+    --color-texto2: #000000;
+    
 }
-
 body.dark-theme {
     --color-bg: #0d1117;
-    ;
-    --color-texto1: #ffb847;
-    --color-texto2: #86ae6f;
-    --color-texto3: #bcbfc0;
+    --color-bg1: #3b3b3b;
+    --color-texto1: #86ae6f;
+    --color-texto2: #b1b1b1;
 }
-
 body.dark-theme img {
     filter: brightness(.8) contrast(1.2);
 }
@@ -45,14 +97,16 @@ body.dark-theme img {
 @media (prefers-color-scheme: dark) {
     body {
         --color-bg: #0d1117;
-        --color-texto1: #ffb847;
-        --color-texto2: #86ae6f;
-        --color-texto3: #bcbfc0;
+        --color-bg1: #3b3b3b;
+        --color-texto1: #86ae6f;
+        --color-texto2: #b1b1b1;
     }
 
     body.light-theme {
         --color-bg: #ffffff;
-        --color-texto1: #42565b;
+        --color-bg1: #f3faff;
+        --color-texto1: #3c286c;
+        --color-texto2: #000000;
     }
 
     img {
@@ -61,26 +115,13 @@ body.dark-theme img {
     
 }
 
-body {
-    background-color: var(--color-bg);
-}
-
-a, h3 {
-    color: var(--color-texto2);
-}
-p {
-    color: var(--color-texto3);
-}
-
-
-
 /*--------------------------------
         NAV BAR GENERAL
 ----------------------------------*/
 
 ul {
     list-style-type: none;
-    align-items: flex-end;
+    align-items: center;
 }
 
 li:hover {
@@ -89,6 +130,7 @@ li:hover {
 
 a {
     text-decoration: none;
+    color: var(--color-texto1);
 }
 
 
@@ -101,7 +143,6 @@ a {
 
 .nav-header {
     margin-right: 10%;
-  /*  color: #281c6f; */
 }
 
 .menu-header, .menu-footer {
@@ -163,7 +204,6 @@ a {
 
 .p-hola {
     text-align: left;
- /*   color: #42565b;  */
     margin: 16px 0 40px 0;
 }
 
@@ -172,7 +212,7 @@ a {
 ----------------------------------*/
 
 .seccion-skills {
-   background-color: #6a6a6a5e; 
+    background-color: var(--color-bg1); 
     padding: 45px;
     justify-content: center;
     align-items: center;
@@ -223,6 +263,7 @@ a {
 p {
     text-align: center;
     margin: 10px 0;
+    color: var(--color-texto2)
 }
 
 h1, h3 {
@@ -250,7 +291,7 @@ h2 {
 
 h3 {
     font-size: 30px;
- /*   color: #3c286c; */
+    color: var(--color-texto1);
     margin: 80px 0 10px 0;
 }
 
@@ -311,7 +352,7 @@ h4 {
 ----------------------------------*/
 
 .seccion-proyectos {
-    background-color: #f9fefb;
+    background: var(--color-bg1); 
     padding: 45px;
 }
 

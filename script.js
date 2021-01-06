@@ -1,4 +1,3 @@
-
 const boton = document.querySelector('#theme');
 const configUser = window.matchMedia('(prefers-color-scheme: dark)');
 const localConfig = localStorage.getItem('tema');
@@ -20,3 +19,48 @@ boton.addEventListener('click', () => {
     }
     localStorage.setItem('tema', colorTema)
 })
+
+/*
+const boton = document.querySelector('#theme');
+const configUser = window.matchMedia('(prefers-color-scheme: dark)');
+const localConfig = localStorage.getItem('tema');
+if (localConfig === 'dark') {
+    document.body.classList.toggle('dark-theme')
+} else if (localConfig === 'light') {
+    document.body.classList.toggle('light-theme')
+}
+boton.addEventListener('click', () => {
+    let colorTema;
+    if (configUser.matches) {
+        // Entramos con modo oscuro
+        document.body.classList.toggle('light-theme')
+        colorTema = document.body.classList.contains('light-theme') ? 'light' : 'dark'
+
+    } else {
+        document.body.classList.toggle('dark-theme')
+        colorTema = document.body.classList.contains('dark-theme') ? 'dark' : 'light'
+    }
+    localStorage.setItem('tema', colorTema)
+})
+*/
+
+/*
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
+
+// SOCIAL PANEL JS
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
+
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
+*/

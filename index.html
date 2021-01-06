@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Gledys</title>
     <link rel="shortcut icon" href="./images/logos/myfavicon.svg" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/e7d4789bf7.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e7d4789bf7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,12 +27,12 @@
                 </a>
                 <a href="#a-contacto"><li class="menu-header">CONTACTO</li>
                 </a>
-                <a id="theme"><li class="menu-header button">CAMBIAR TEMA</li>
-                </a>
-                <button class="switch" id="switch">
-					<span><i class="fas fa-sun"></i></span>
-					<span><i class="fas fa-moon"></i></span>
-				</button>
+                <input type="checkbox" class="checkbox" id="theme" />
+	             <label class="label" for="theme">
+		          <i class="fas fa-moon"></i>
+		          <i class="fas fa-sun"></i>
+		          <div class="ball"></div>
+                 </label>
             </ul>
            <i id="nav-burger" class="fas fa-bars"></i>
         </nav> 
