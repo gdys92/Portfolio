@@ -19,3 +19,5 @@ boton.addEventListener('click', () => {
     }
     localStorage.setItem('tema', colorTema)
 })
+
+// haciendo prueba con un comentario
